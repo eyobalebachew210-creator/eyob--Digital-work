@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eyob Digital Work</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  background: #0b3d91;
+  color: white;
+  text-align: center;
+  padding: 35px 15px;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 17px;
+}
+
+nav {
+  background: #082f6d;
+  text-align: center;
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 45px 18px;
+}
+
+.hero {
+  text-align: center;
+  background: white;
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 40px 20px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.hero h2 {
+  color: #0b3d91;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.button {
+  display: inline-block;
+  background: #16a34a;
+  color: white;
+  padding: 13px 22px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.card {
+  background: white;
+  padding: 25px 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  color: #0b3d91;
+  margin-bottom: 10px;
+}
+
+.order {
+  background: white;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+footer {
+  background: #082f6d;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 26px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Eyob Digital Work</h1>
+  <p>Digital Services • Website • Design • Online Support</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#order">Order</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+  <div class="hero">
+    <h2>Welcome to Eyob Digital Work</h2>
+    <p>
+      We provide simple, affordable and professional digital services
+      for individuals and small businesses.
+    </p>
+
+    <a class="button"
+       href="https://wa.me/251947593390?text=Hello%20Eyob%20Digital%20Work,%20I%20want%20to%20order%20a%20service."
+       target="_blank">
+       Order on WhatsApp
+    </a>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <h3>🌐 Website Creation</h3>
+      <p>Simple and professional websites for individuals and businesses.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎨 Digital Design</h3>
+      <p>Posters, advertisements and other digital designs.</p>
+    </div>
+
+    <div class="card">
+      <h3>📱 Social Media</h3>
+      <p>Help with digital content and social media presentation.</p>
+    </div>
+
+    <div class="card">
+      <h3>💻 Digital Support</h3>
+      <p>Basic online and digital technology assistance.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="order">
+  <h2>Place Your Order</h2>
+
+  <div class="order">
+
+    <label>Your Name</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>Select Service</label>
+    <select id="service">
+      <option>Website Creation</option>
+      <option>Digital Design</option>
+      <option>Social Media Support</option>
+      <option>Digital Support</option>
+      <option>Other</option>
+    </select>
+
+    <label>Your Message</label>
+    <textarea id="message" rows="5"
+      placeholder="Describe what you need"></textarea>
+
+    <button onclick="sendWhatsApp()">
+      Send Order on WhatsApp
+    </button>
+
+  </div>
+</section>
+
+<section id="contact">
+  <div class="hero">
+    <h2>Contact Eyob Digital Work</h2>
+    <p>WhatsApp: 0947593390</p>
+
+    <a class="button"
+       href="https://wa.me/251947593390"
+       target="_blank">
+       Contact on WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Eyob Digital Work</p>
+  <p>Professional Digital Services</p>
+</footer>
+
+<script>
+function sendWhatsApp() {
+
+  const name = document.getElementById("name").value;
+  const service = document.getElementById("service").value;
+  const message = document.getElementById("message").value;
+
+  const text =
+    "Hello Eyob Digital Work,%0A%0A" +
+    "Name: " + encodeURIComponent(name) + "%0A" +
+    "Service: " + encodeURIComponent(service) + "%0A" +
+    "Message: " + encodeURIComponent(message);
+
+  window.open(
+    "https://wa.me/251947593390?text=" + text,
+    "_blank"
+  );
+}
+</script>
+
+</body>
+  </html>
